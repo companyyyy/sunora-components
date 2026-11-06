@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "description": "Sunora Components is a B2B distributor of solar PV systems: panels, inverters, batteries, mounting and kits for installers, EPCs and resellers across Europe."
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "becomePartner": "Become a partner",
+    "requestQuote": "Request a quote",
+    "logIn": "Log in",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "toggleTheme": "Switch between light and dark theme",
+    "language": "Language",
+    "mainNavigation": "Main navigation",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "nav": {
+    "products": "Products",
+    "brands": "Brands",
+    "kits": "Kits",
+    "solutions": "Solutions",
+    "knowledge": "Knowledge",
+    "about": "About",
+    "delivery": "Delivery",
+    "support": "Support",
+    "contact": "Contact",
+    "partner": "Become a partner",
+    "quote": "Request a quote",
+    "account": "My account",
+    "allProducts": "All products",
+    "allBrands": "All brands",
+    "browseKits": "Ready-made kits"
+  },
+  "categories": {
+    "panels": {
+      "name": "Solar panels",
+      "description": "TODO: Modules for rooftop and ground-mount systems"
+    },
+    "inverters": {
+      "name": "Inverters",
+      "description": "TODO: Hybrid, on-grid and off-grid, single and three phase"
+    },
+    "batteries": {
+      "name": "Batteries / BESS",
+      "description": "TODO: LV and HV storage for homes and C&I"
+    },
+    "mounting": {
+      "name": "Mounting",
+      "description": "TODO: Roof and ground structures"
+    },
+    "accessories": {
+      "name": "Accessories and electrical",
+      "description": "TODO: Cables, connectors and protection"
+    },
+    "evChargers": {
+      "name": "EV chargers",
+      "description": "TODO: AC and DC charging equipment"
+    }
+  },
+  "solutions": {
+    "residential": {
+      "name": "Residential",
+      "description": "TODO: Systems for home installations"
+    },
+    "commercial": {
+      "name": "Commercial and industrial",
+      "description": "TODO: Project supply for C&I and EPCs"
+    },
+    "bess": {
+      "name": "Battery storage",
+      "description": "TODO: BESS for sites of any size"
+    }
+  },
+  "footer": {
+    "tagline": "TODO: B2B distributor of solar PV systems for installers, EPCs and resellers.",
+    "products": "Products",
+    "company": "Company",
+    "help": "Help",
+    "legal": "Legal",
+    "vatId": "VAT ID",
+    "rights": "All rights reserved."
+  },
+  "pages": {
+    "home": "Sunora Components",
+    "products": "Products",
+    "brands": "Brands",
+    "kits": "Kits",
+    "solutions": "Solutions",
+    "partner": "Become a partner",
+    "quote": "Request a quote",
+    "knowledge": "Knowledge",
+    "about": "About",
+    "delivery": "Delivery",
+    "support": "Support",
+    "contact": "Contact",
+    "account": "My account",
+    "terms": "Terms of sale",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "imprint": "Imprint"
+  },
+  "placeholder": {
+    "todo": "TODO: This page is built in milestone {milestone}."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "backHome": "Back to home"
+  }
+}
