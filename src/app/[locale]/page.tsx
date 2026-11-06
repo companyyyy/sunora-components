@@ -1,7 +1,7 @@
 import type { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { CatalogueIndex } from "@/components/catalog/catalogue-index";
 import { Link } from "@/i18n/navigation";
-import { productCategories } from "@/lib/nav";
 import { site } from "@/lib/site";
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
@@ -44,23 +44,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <h2 id="catalogue" className="font-mono text-sm text-muted-foreground">
           {t("home.catalogue")}
         </h2>
-        <ol className="mt-4 border-b border-foreground">
-          {productCategories.map(({ key, href }, index) => (
-            <li key={key} className="border-t border-foreground">
-              <Link
-                href={href}
-                className="grid grid-cols-[3rem_1fr] items-baseline py-4 hover:bg-brand hover:text-brand-foreground md:grid-cols-[6rem_1fr] md:py-5"
-              >
-                <span aria-hidden="true" className="font-mono text-sm">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="text-2xl font-medium tracking-tight md:text-4xl">
-                  {t(`categories.${key}.name`)}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ol>
+        <div className="mt-4">
+          <CatalogueIndex />
+        </div>
       </section>
     </>
   );
