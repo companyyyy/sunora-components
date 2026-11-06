@@ -65,24 +65,24 @@ export function Footer() {
             {postalCode} {city}, {country}
           </p>
           <p className="mt-3 space-y-1">
-            <a
-              href={site.phoneHref}
-              className={`block tabular-nums ${linkClass}`}
-            >
+            <a href={site.phoneHref} className={`block font-mono ${linkClass}`}>
               {site.phone}
             </a>
-            <a href={`mailto:${site.email}`} className={`block ${linkClass}`}>
+            <a
+              href={`mailto:${site.email}`}
+              className={`block font-mono ${linkClass}`}
+            >
               {site.email}
             </a>
           </p>
-          <p className="mt-3 text-inverse-muted tabular-nums">
+          <p className="mt-3 font-mono text-inverse-muted">
             {t("footer.vatId")}: {site.vatId}
           </p>
         </address>
       </div>
 
       <div className="border-t border-white/15">
-        <div className="container-site flex flex-col gap-3 py-5 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-site flex flex-col gap-3 py-5 font-mono text-xs sm:flex-row sm:items-center sm:justify-between">
           <p className="text-inverse-muted">
             © {new Date().getFullYear()} {site.legalName}. {t("footer.rights")}
           </p>

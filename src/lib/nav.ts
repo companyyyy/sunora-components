@@ -1,24 +1,12 @@
-import {
-  BatteryCharging,
-  Cable,
-  Fence,
-  Factory,
-  Home,
-  PlugZap,
-  Sun,
-  Zap,
-  type LucideIcon,
-} from "lucide-react";
-
-type MenuItem = { key: string; href: string; icon: LucideIcon };
+type MenuItem = { key: string; href: string };
 
 export const productCategories = [
-  { key: "panels", href: "/products/solar-panels", icon: Sun },
-  { key: "inverters", href: "/products/inverters", icon: Zap },
-  { key: "batteries", href: "/products/batteries", icon: BatteryCharging },
-  { key: "mounting", href: "/products/mounting", icon: Fence },
-  { key: "accessories", href: "/products/accessories", icon: Cable },
-  { key: "evChargers", href: "/products/ev-chargers", icon: PlugZap },
+  { key: "panels", href: "/products/solar-panels" },
+  { key: "inverters", href: "/products/inverters" },
+  { key: "batteries", href: "/products/batteries" },
+  { key: "mounting", href: "/products/mounting" },
+  { key: "accessories", href: "/products/accessories" },
+  { key: "evChargers", href: "/products/ev-chargers" },
 ] as const satisfies readonly MenuItem[];
 
 export const categorySlugs = productCategories.map((category) =>
@@ -26,9 +14,9 @@ export const categorySlugs = productCategories.map((category) =>
 );
 
 export const solutionLinks = [
-  { key: "residential", href: "/solutions#residential", icon: Home },
-  { key: "commercial", href: "/solutions#commercial", icon: Factory },
-  { key: "bess", href: "/solutions#bess", icon: BatteryCharging },
+  { key: "residential", href: "/solutions#residential" },
+  { key: "commercial", href: "/solutions#commercial" },
+  { key: "bess", href: "/solutions#bess" },
 ] as const satisfies readonly MenuItem[];
 
 /** Plain header links, in display order. Keys live in the `nav` messages. */

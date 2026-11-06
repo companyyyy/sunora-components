@@ -16,6 +16,10 @@
     "phone": "Phone",
     "email": "Email"
   },
+  "home": {
+    "lead": "Solar panels, inverters, batteries and mounting for installers, EPCs and resellers across Europe.",
+    "catalogue": "Catalogue"
+  },
   "nav": {
     "products": "Products",
     "brands": "Brands",
@@ -35,46 +39,37 @@
   },
   "categories": {
     "panels": {
-      "name": "Solar panels",
-      "description": "TODO: Modules for rooftop and ground-mount systems"
+      "name": "Solar panels"
     },
     "inverters": {
-      "name": "Inverters",
-      "description": "TODO: Hybrid, on-grid and off-grid, single and three phase"
+      "name": "Inverters"
     },
     "batteries": {
-      "name": "Batteries / BESS",
-      "description": "TODO: LV and HV storage for homes and C&I"
+      "name": "Batteries / BESS"
     },
     "mounting": {
-      "name": "Mounting",
-      "description": "TODO: Roof and ground structures"
+      "name": "Mounting"
     },
     "accessories": {
-      "name": "Accessories and electrical",
-      "description": "TODO: Cables, connectors and protection"
+      "name": "Accessories and electrical"
     },
     "evChargers": {
-      "name": "EV chargers",
-      "description": "TODO: AC and DC charging equipment"
+      "name": "EV chargers"
     }
   },
   "solutions": {
     "residential": {
-      "name": "Residential",
-      "description": "TODO: Systems for home installations"
+      "name": "Residential"
     },
     "commercial": {
-      "name": "Commercial and industrial",
-      "description": "TODO: Project supply for C&I and EPCs"
+      "name": "Commercial and industrial"
     },
     "bess": {
-      "name": "Battery storage",
-      "description": "TODO: BESS for sites of any size"
+      "name": "Battery storage"
     }
   },
   "footer": {
-    "tagline": "TODO: B2B distributor of solar PV systems for installers, EPCs and resellers.",
+    "tagline": "B2B distributor of solar PV systems for installers, EPCs and resellers.",
     "products": "Products",
     "company": "Company",
     "help": "Help",
@@ -83,7 +78,6 @@
     "rights": "All rights reserved."
   },
   "pages": {
-    "home": "Sunora Components",
     "products": "Products",
     "brands": "Brands",
     "kits": "Kits",
@@ -102,7 +96,7 @@
     "imprint": "Imprint"
   },
   "placeholder": {
-    "todo": "TODO: This page is built in milestone {milestone}."
+    "notReady": "This page isn't finished yet. For product or price questions, call or write to us."
   },
   "notFound": {
     "title": "Page not found",

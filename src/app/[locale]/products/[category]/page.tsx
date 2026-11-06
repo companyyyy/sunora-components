@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PlaceholderNote } from "@/components/layout/page-placeholder";
 import { routing } from "@/i18n/routing";
 import { productCategories } from "@/lib/nav";
 
@@ -31,9 +32,7 @@ export default async function CategoryPage({
       <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
         {t(`categories.${category.key}.name`)}
       </h1>
-      <p className="mt-3 text-muted-foreground">
-        {t("placeholder.todo", { milestone: 2 })}
-      </p>
+      <PlaceholderNote milestone={2} />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowRight, type LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import {
   NavigationMenu,
@@ -14,32 +13,10 @@ import {
 import { Link, usePathname } from "@/i18n/navigation";
 import { primaryLinks, productCategories, solutionLinks } from "@/lib/nav";
 
-function MenuEntry({
-  href,
-  icon: Icon,
-  name,
-  description,
-}: {
-  href: string;
-  icon: LucideIcon;
-  name: string;
-  description: string;
-}) {
+function MenuEntry({ href, name }: { href: string; name: string }) {
   return (
-    <NavigationMenuLink
-      closeOnClick
-      render={<Link href={href} />}
-      className="items-start gap-3 p-3"
-    >
-      <span className="grid size-9 shrink-0 place-items-center rounded-md bg-muted text-foreground">
-        <Icon className="size-5" aria-hidden="true" />
-      </span>
-      <span>
-        <span className="block font-medium">{name}</span>
-        <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">
-          {description}
-        </span>
-      </span>
+    <NavigationMenuLink closeOnClick render={<Link href={href} />}>
+      {name}
     </NavigationMenuLink>
   );
 }
@@ -53,21 +30,16 @@ export function DesktopNav() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>{t("nav.products")}</NavigationMenuTrigger>
-          <NavigationMenuContent className="w-3xl p-3">
-            <div className="grid grid-cols-[1fr_1fr_11rem] gap-1">
-              <ul className="col-span-2 grid grid-cols-2 gap-1">
-                {productCategories.map(({ key, href, icon }) => (
+          <NavigationMenuContent className="w-xl p-3">
+            <div className="grid grid-cols-[1fr_11rem] gap-3">
+              <ul className="flex flex-col">
+                {productCategories.map(({ key, href }) => (
                   <li key={key}>
-                    <MenuEntry
-                      href={href}
-                      icon={icon}
-                      name={t(`categories.${key}.name`)}
-                      description={t(`categories.${key}.description`)}
-                    />
+                    <MenuEntry href={href} name={t(`categories.${key}.name`)} />
                   </li>
                 ))}
               </ul>
-              <ul className="flex flex-col gap-1 border-l border-border pl-3">
+              <ul className="flex flex-col border-l border-border pl-3">
                 {(
                   [
                     ["allProducts", "/products"],
@@ -76,14 +48,7 @@ export function DesktopNav() {
                   ] as const
                 ).map(([key, href]) => (
                   <li key={key}>
-                    <NavigationMenuLink
-                      closeOnClick
-                      render={<Link href={href} />}
-                      className="justify-between font-medium"
-                    >
-                      {t(`nav.${key}`)}
-                      <ArrowRight aria-hidden="true" />
-                    </NavigationMenuLink>
+                    <MenuEntry href={href} name={t(`nav.${key}`)} />
                   </li>
                 ))}
               </ul>
@@ -93,16 +58,11 @@ export function DesktopNav() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>{t("nav.solutions")}</NavigationMenuTrigger>
-          <NavigationMenuContent className="w-sm p-3">
-            <ul className="flex flex-col gap-1">
-              {solutionLinks.map(({ key, href, icon }) => (
+          <NavigationMenuContent className="w-72 p-3">
+            <ul className="flex flex-col">
+              {solutionLinks.map(({ key, href }) => (
                 <li key={key}>
-                  <MenuEntry
-                    href={href}
-                    icon={icon}
-                    name={t(`solutions.${key}.name`)}
-                    description={t(`solutions.${key}.description`)}
-                  />
+                  <MenuEntry href={href} name={t(`solutions.${key}.name`)} />
                 </li>
               ))}
             </ul>

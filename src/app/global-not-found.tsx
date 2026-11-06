@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 import { routing } from "@/i18n/routing";
+import { fontClasses } from "@/lib/fonts";
 import { site } from "@/lib/site";
 import messages from "../../messages/en.json";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin", "latin-ext", "cyrillic"],
-});
 
 const t = messages.notFound;
 
@@ -21,7 +16,7 @@ export const metadata: Metadata = {
 // Becomes 404.html, which GitHub Pages serves for unknown paths.
 export default function GlobalNotFound() {
   return (
-    <html lang={routing.defaultLocale} className={inter.variable}>
+    <html lang={routing.defaultLocale} className={fontClasses}>
       <body className="flex min-h-dvh flex-col antialiased">
         <main className="container-site flex-1 py-24 text-center">
           <p className="text-sm font-semibold text-muted-foreground tabular-nums">

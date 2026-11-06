@@ -65,13 +65,9 @@ export function MobileNav() {
             {t("nav.products")}
           </Link>
           <ul>
-            {productCategories.map(({ key, href, icon: Icon }) => (
+            {productCategories.map(({ key, href }) => (
               <li key={key}>
                 <Link href={href} onClick={close} className={linkClass}>
-                  <Icon
-                    className="size-5 text-muted-foreground"
-                    aria-hidden="true"
-                  />
                   {t(`categories.${key}.name`)}
                 </Link>
               </li>
@@ -88,13 +84,9 @@ export function MobileNav() {
             </Link>
           </div>
           <ul>
-            {solutionLinks.map(({ key, href, icon: Icon }) => (
+            {solutionLinks.map(({ key, href }) => (
               <li key={key}>
                 <Link href={href} onClick={close} className={linkClass}>
-                  <Icon
-                    className="size-5 text-muted-foreground"
-                    aria-hidden="true"
-                  />
                   {t(`solutions.${key}.name`)}
                 </Link>
               </li>

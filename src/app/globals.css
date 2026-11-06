@@ -8,6 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
   --font-heading: var(--font-sans);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
@@ -40,59 +41,60 @@
 }
 
 :root {
-  --radius: 0.5rem;
+  /* Square corners everywhere: every radius token derives from this. */
+  --radius: 0rem;
 
-  /* Solar amber accent. Text on it is always dark navy. */
-  --brand: #f5a623;
-  --brand-foreground: #12233d;
+  /* Signal yellow. Only ever a background, always with ink text on it. */
+  --brand: #f5c400;
+  --brand-foreground: #151713;
 
-  /* Navy bands: footer and top bar, in both themes. */
-  --inverse: #12294a;
-  --inverse-foreground: #ffffff;
-  --inverse-muted: #c5d0df;
+  /* Ink bands: footer and top bar, in both themes. */
+  --inverse: #151713;
+  --inverse-foreground: #f6f4ee;
+  --inverse-muted: #b9b8ae;
 
-  --background: #ffffff;
-  --foreground: #0f1c2e;
-  --card: #ffffff;
-  --card-foreground: #0f1c2e;
-  --popover: #ffffff;
-  --popover-foreground: #0f1c2e;
-  --primary: #12294a;
-  --primary-foreground: #ffffff;
-  --secondary: #eef2f7;
-  --secondary-foreground: #12294a;
-  --muted: #eef2f7;
-  --muted-foreground: #4f5d73;
-  --accent: #eef2f7;
-  --accent-foreground: #12294a;
-  --destructive: #c62828;
-  --border: #dbe2ea;
-  --input: #c3cdd9;
-  --ring: #2f5d9b;
+  --background: #f6f4ee;
+  --foreground: #151713;
+  --card: #fffefa;
+  --card-foreground: #151713;
+  --popover: #fffefa;
+  --popover-foreground: #151713;
+  --primary: #151713;
+  --primary-foreground: #f6f4ee;
+  --secondary: #ebe8df;
+  --secondary-foreground: #151713;
+  --muted: #ebe8df;
+  --muted-foreground: #55574e;
+  --accent: #ebe8df;
+  --accent-foreground: #151713;
+  --destructive: #b3261e;
+  --border: #cfcbbf;
+  --input: #a9a699;
+  --ring: #151713;
 }
 
 .dark {
-  --inverse: #0a1320;
-  --inverse-muted: #a9b6c8;
+  --inverse: #0b0c09;
+  --inverse-muted: #a9aa9e;
 
-  --background: #0f1b2c;
-  --foreground: #eef2f7;
-  --card: #16263b;
-  --card-foreground: #eef2f7;
-  --popover: #16263b;
-  --popover-foreground: #eef2f7;
-  --primary: #eef2f7;
-  --primary-foreground: #12294a;
-  --secondary: #1f3149;
-  --secondary-foreground: #eef2f7;
-  --muted: #1f3149;
-  --muted-foreground: #a9b6c8;
-  --accent: #1f3149;
-  --accent-foreground: #eef2f7;
+  --background: #121410;
+  --foreground: #eeece4;
+  --card: #1b1e18;
+  --card-foreground: #eeece4;
+  --popover: #1b1e18;
+  --popover-foreground: #eeece4;
+  --primary: #eeece4;
+  --primary-foreground: #151713;
+  --secondary: #24271f;
+  --secondary-foreground: #eeece4;
+  --muted: #24271f;
+  --muted-foreground: #a9aa9e;
+  --accent: #24271f;
+  --accent-foreground: #eeece4;
   --destructive: #ef6b6b;
-  --border: rgb(255 255 255 / 12%);
-  --input: rgb(255 255 255 / 20%);
-  --ring: #f5a623;
+  --border: rgb(255 255 255 / 14%);
+  --input: rgb(255 255 255 / 24%);
+  --ring: #f5c400;
 }
 
 @utility container-site {

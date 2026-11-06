@@ -1,4 +1,3 @@
-import { FileText, Mail, Phone, UserRound } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
@@ -14,21 +13,13 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background">
-      <div className="hidden bg-inverse text-xs text-inverse-foreground md:block">
+      <div className="hidden bg-inverse font-mono text-xs text-inverse-foreground md:block">
         <div className="container-site flex h-8 items-center justify-end gap-5">
-          <a
-            href={site.phoneHref}
-            className="flex items-center gap-1.5 tabular-nums hover:underline"
-          >
-            <Phone className="size-3.5" aria-hidden="true" />
+          <a href={site.phoneHref} className="hover:underline">
             <span className="sr-only">{t("phone")}: </span>
             {site.phone}
           </a>
-          <a
-            href={`mailto:${site.email}`}
-            className="flex items-center gap-1.5 hover:underline"
-          >
-            <Mail className="size-3.5" aria-hidden="true" />
+          <a href={`mailto:${site.email}`} className="hover:underline">
             <span className="sr-only">{t("email")}: </span>
             {site.email}
           </a>
@@ -46,26 +37,18 @@ export function Header() {
           <div className="hidden items-center gap-1 xl:flex">
             <LanguageSwitcher />
             <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon-lg"
-              aria-label={t("requestQuote")}
-              title={t("requestQuote")}
-              nativeButton={false}
-              render={<Link href="/quote" />}
+            <Link
+              href="/quote"
+              className="px-2 text-sm font-medium underline-offset-4 hover:underline"
             >
-              <FileText className="size-5" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon-lg"
-              aria-label={t("logIn")}
-              title={t("logIn")}
-              nativeButton={false}
-              render={<Link href="/account" />}
+              {t("requestQuote")}
+            </Link>
+            <Link
+              href="/account"
+              className="px-2 text-sm font-medium underline-offset-4 hover:underline"
             >
-              <UserRound className="size-5" />
-            </Button>
+              {t("logIn")}
+            </Link>
           </div>
 
           <Button
