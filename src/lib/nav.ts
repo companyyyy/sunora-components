@@ -22,6 +22,7 @@ export const solutionLinks = [
 /** Plain header links, in display order. Keys live in the `nav` messages. */
 export const primaryLinks = [
   { key: "brands", href: "/brands" },
+  { key: "delivery", href: "/delivery" },
   { key: "kits", href: "/kits" },
   { key: "knowledge", href: "/knowledge" },
   { key: "about", href: "/about" },

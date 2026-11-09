@@ -1,6 +1,7 @@
 import type { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactBand } from "@/components/catalog/contact-band";
+import { CoreBrands } from "@/components/distribution/core-brands";
 import { Link } from "@/i18n/navigation";
 import { brands } from "@/lib/catalog";
 import { productCategories } from "@/lib/nav";
@@ -18,10 +19,12 @@ export default async function BrandsPage({
 
   return (
     <>
-      <div className="container-site py-12 md:py-16">
-        <h1 className="mb-8 text-3xl font-semibold tracking-tight md:text-4xl">
-          {t("pages.brands")}
-        </h1>
+      <h1 className="sr-only">{t("pages.brands")}</h1>
+      <CoreBrands />
+      <div className="container-site pb-12 md:pb-16">
+        <h2 className="mb-8 font-mono text-sm text-muted-foreground">
+          {t("brands.inCatalogue")}
+        </h2>
         <ul className="border-b border-foreground">
           {brands.map(({ name, categories }) => (
             <li

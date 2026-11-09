@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "description": "Sunora Components is a B2B distributor of solar PV systems: panels, inverters, batteries, mounting and kits for installers, EPCs and resellers across Europe."
+    "description": "Sunora Components is a wholesale distributor of solar equipment: Felicity Solar, MUST, DAH Solar, LONGi and Deye, delivered to Ukraine, Moldova, Romania and Poland."
   },
   "common": {
     "skipToContent": "Skip to content",
     "becomePartner": "Become a partner",
-    "requestQuote": "Request a quote",
+    "requestQuote": "Request a proposal",
     "logIn": "Log in",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -17,7 +17,14 @@
     "email": "Email"
   },
   "home": {
-    "lead": "Solar panels, inverters, batteries and mounting for installers, EPCs and resellers across Europe.",
+    "eyebrow": "Wholesale solar distribution",
+    "lead": "We supply installers, dealers and EPCs in volume and deliver across Eastern Europe: Kyiv, Odesa, Bucharest, Chișinău and Warsaw.",
+    "requestProposal": "Request a proposal",
+    "facts": {
+      "brands": "core brands",
+      "cities": "delivery cities",
+      "volume": "Pallet and truckload orders"
+    },
     "catalogue": "Catalogue"
   },
   "catalog": {
@@ -112,7 +119,7 @@
     "support": "Support",
     "contact": "Contact",
     "partner": "Become a partner",
-    "quote": "Request a quote",
+    "quote": "Request a proposal",
     "account": "My account",
     "allProducts": "All products",
     "allBrands": "All brands",
@@ -150,7 +157,7 @@
     }
   },
   "footer": {
-    "tagline": "B2B distributor of solar PV systems for installers, EPCs and resellers.",
+    "tagline": "Wholesale distributor of solar equipment for installers, dealers and EPCs in Eastern Europe.",
     "products": "Products",
     "company": "Company",
     "help": "Help",
@@ -164,7 +171,7 @@
     "kits": "Kits",
     "solutions": "Solutions",
     "partner": "Become a partner",
-    "quote": "Request a quote",
+    "quote": "Request a proposal",
     "knowledge": "Knowledge",
     "about": "About",
     "delivery": "Delivery",
@@ -183,5 +190,77 @@
     "title": "Page not found",
     "description": "The page you are looking for does not exist or has moved.",
     "backHome": "Back to home"
+  },
+  "distribution": {
+    "brandsHeading": "Brands we distribute",
+    "brandsLead": "Inverters, batteries and panels from five manufacturers, stocked for wholesale orders.",
+    "heading": "We deliver to Eastern Europe",
+    "lead": "Large orders shipped to our partners in Ukraine, Moldova, Romania and Poland.",
+    "from": "From {city}",
+    "other": "Another city? Ask us: we quote delivery for every order.",
+    "mapCaption": "Delivery routes from Tallinn to Kyiv, Odesa, Bucharest, Chișinău and Warsaw",
+    "cities": {
+      "tallinn": "Tallinn",
+      "kyiv": "Kyiv",
+      "odesa": "Odesa",
+      "bucharest": "Bucharest",
+      "chisinau": "Chișinău",
+      "warsaw": "Warsaw"
+    },
+    "countries": {
+      "kyiv": "Ukraine",
+      "odesa": "Ukraine",
+      "bucharest": "Romania",
+      "chisinau": "Moldova",
+      "warsaw": "Poland"
+    }
+  },
+  "form": {
+    "heading": "Request a proposal",
+    "lead": "Tell us who you are and what you need. A manager will reply with prices, stock and delivery terms.",
+    "subject": "Proposal request",
+    "firstName": "First name",
+    "company": "Company name",
+    "phone": "Phone",
+    "email": "Email",
+    "city": "City",
+    "country": "Country",
+    "turnover": "Annual turnover",
+    "service": "What do you need",
+    "message": "Message",
+    "messagePlaceholder": "Products, quantities, delivery city",
+    "choose": "Choose…",
+    "countries": {
+      "ukraine": "Ukraine",
+      "moldova": "Moldova",
+      "romania": "Romania",
+      "poland": "Poland",
+      "estonia": "Estonia",
+      "latvia": "Latvia",
+      "lithuania": "Lithuania",
+      "other": "Other"
+    },
+    "turnovers": {
+      "under100k": "Under €100,000",
+      "to500k": "€100,000 – €500,000",
+      "to1m": "€500,000 – €1 million",
+      "to5m": "€1 – €5 million",
+      "over5m": "Over €5 million"
+    },
+    "services": {
+      "wholesale": "Wholesale purchase",
+      "dealer": "Become a dealer",
+      "project": "Supply for a project",
+      "delivery": "Delivery quote"
+    },
+    "consent": "I have read the {company} <privacy>privacy policy</privacy> and agree to the terms and conditions.",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "sent": "Thank you. Your request has been sent, and a manager will contact you.",
+    "mailto": "Your email app should open with the request filled in. If it doesn't, write to {email}.",
+    "error": "The request wasn't sent. Please try again, or contact us at {email} or {phone}."
+  },
+  "brands": {
+    "inCatalogue": "All brands in the catalogue"
   }
 }
