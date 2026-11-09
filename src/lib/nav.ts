@@ -24,9 +24,7 @@ export const primaryLinks = [
   { key: "brands", href: "/brands" },
   { key: "delivery", href: "/delivery" },
   { key: "kits", href: "/kits" },
-  { key: "knowledge", href: "/knowledge" },
   { key: "about", href: "/about" },
-  { key: "support", href: "/support" },
   { key: "contact", href: "/contact" },
 ] as const;
 
@@ -36,7 +34,6 @@ export const footerGroups = [
     links: [
       { key: "about", href: "/about" },
       { key: "brands", href: "/brands" },
-      { key: "knowledge", href: "/knowledge" },
       { key: "delivery", href: "/delivery" },
       { key: "partner", href: "/partner" },
     ],
@@ -44,7 +41,6 @@ export const footerGroups = [
   {
     key: "help",
     links: [
-      { key: "support", href: "/support" },
       { key: "quote", href: "/quote" },
       { key: "contact", href: "/contact" },
     ],

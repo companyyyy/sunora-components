@@ -1,6 +1,7 @@
 import type { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CatalogueIndex } from "@/components/catalog/catalogue-index";
+import { AboutSection } from "@/components/distribution/about-section";
 import { CoreBrands } from "@/components/distribution/core-brands";
 import { EuropeMap } from "@/components/distribution/europe-map";
 import { Testimonials } from "@/components/distribution/testimonials";
@@ -77,7 +78,11 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         </div>
       </section>
 
-      <CoreBrands />
+      <AboutSection />
+
+      <div className="border-t border-foreground">
+        <CoreBrands />
+      </div>
 
       <PhotoBanner src={panelsSky} position="object-bottom">
         <p className="text-2xl font-medium tracking-tight md:text-3xl">

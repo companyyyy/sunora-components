@@ -19,5 +19,27 @@ type Testimonial = {
  *     city: "…",
  *   },
  */
-// TODO: Add the reviews the client is collecting.
-export const testimonials: readonly Testimonial[] = [];
+// TODO: Replace these placeholders with the reviews the client is collecting.
+export const testimonials: readonly Testimonial[] = [
+  {
+    quote: "[Review text from partner 1]",
+    name: "[Name]",
+    role: "[Role]",
+    company: "[Company]",
+    city: "[City]",
+  },
+  {
+    quote: "[Review text from partner 2]",
+    name: "[Name]",
+    role: "[Role]",
+    company: "[Company]",
+    city: "[City]",
+  },
+  {
+    quote: "[Review text from partner 3]",
+    name: "[Name]",
+    role: "[Role]",
+    company: "[Company]",
+    city: "[City]",
+  },
+];

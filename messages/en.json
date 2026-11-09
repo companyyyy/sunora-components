@@ -113,10 +113,8 @@
     "brands": "Brands",
     "kits": "Kits",
     "solutions": "Solutions",
-    "knowledge": "Knowledge",
     "about": "About",
     "delivery": "Delivery",
-    "support": "Support",
     "contact": "Contact",
     "partner": "Become a partner",
     "quote": "Request a proposal",
@@ -171,10 +169,8 @@
     "solutions": "Solutions",
     "partner": "Become a partner",
     "quote": "Request a proposal",
-    "knowledge": "Knowledge",
     "about": "About",
     "delivery": "Delivery",
-    "support": "Support",
     "contact": "Contact",
     "terms": "Terms of sale",
     "privacy": "Privacy policy",
@@ -263,5 +259,58 @@
   },
   "testimonials": {
     "heading": "What our partners say"
+  },
+  "kits": {
+    "lead": "Complete systems built from products we stock: inverter, batteries, panels, mounting and cabling, checked for compatibility. Order a kit as one item, or ask us to adapt it to your site.",
+    "kitNumber": "Kit {number}",
+    "inverter": "Inverter",
+    "battery": "Battery",
+    "solar": "Solar array",
+    "phases": "Grid connection",
+    "phaseCount": "{count, plural, one {Single-phase} other {#-phase}}",
+    "contents": "What's in the kit",
+    "request": "Request this kit",
+    "custom": "Need a different size, another brand or a roof type not listed here? Send us the site details and we'll put together a kit.",
+    "items": {
+      "home6": {
+        "name": "Home hybrid 6 kW",
+        "useCase": "A private house on a single-phase connection. Solar power by day, battery in the evening and during outages. Pitched metal or trapezoidal roof."
+      },
+      "business12": {
+        "name": "Three-phase hybrid 12 kW",
+        "useCase": "A large house or small business on a three-phase connection, with a flat roof. Cuts daytime grid use and keeps critical loads running."
+      },
+      "backup4": {
+        "name": "Backup power 4 kW",
+        "useCase": "No panels: the battery charges from the grid and takes over during outages. For homes, shops and offices that need power through blackouts."
+      }
+    }
+  },
+  "about": {
+    "heading": "About us",
+    "lead": "Sunora Components is a wholesale distributor of solar equipment, based in Tallinn, Estonia.",
+    "more": "More about us",
+    "story1": "We are not a retail shop. We work with installers, dealers and EPC contractors who buy in volume, and we supply them with inverters, batteries and solar panels.",
+    "story2": "We distribute five manufacturers: Felicity Solar, MUST, DAH Solar, LONGi and Deye. That covers a full system, from panels on the roof to the inverter and battery storage.",
+    "story3": "Our market is Eastern Europe. We deliver large orders to Kyiv, Odesa, Bucharest, Chișinău and Warsaw, and quote delivery to other cities on request.",
+    "points": {
+      "wholesale": {
+        "title": "Wholesale, not retail",
+        "text": "Orders by the pallet and the truckload, for installers, dealers and EPC contractors."
+      },
+      "brands": {
+        "title": "Five manufacturers",
+        "text": "Felicity Solar, MUST, DAH Solar, LONGi and Deye: inverters, batteries and panels."
+      },
+      "delivery": {
+        "title": "Delivery to Eastern Europe",
+        "text": "Kyiv, Odesa, Bucharest, Chișinău and Warsaw. Other cities on request."
+      }
+    },
+    "details": {
+      "company": "Company",
+      "address": "Registered address",
+      "contact": "Contact"
+    }
   }
 }
