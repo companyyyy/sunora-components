@@ -31,6 +31,40 @@ Every push to `main` runs the checks in `.github/workflows/deploy.yml` and publi
 
 The site has no server, so features that need one, such as logins or partner-only prices, require a different host.
 
+## Server (Docker)
+
+The production server builds the site into a Docker image and serves it with nginx. The server's `nginx-proxy` container routes `sunoracomponents.eu` to it, and `acme-companion` issues the HTTPS certificate. Both find the site through the `VIRTUAL_HOST` and `LETSENCRYPT_HOST` variables in `docker-compose.yml`, so the proxy needs no config changes.
+
+| File                                  | Purpose                                                     |
+| ------------------------------------- | ----------------------------------------------------------- |
+| `Dockerfile`                          | Builds the static export, then serves it with nginx         |
+| `deploy/nginx/site.conf`              | nginx inside the site container, including the www redirect |
+| `docker-compose.yml`                  | Runs the container on the `webproxy` network                |
+| `.github/workflows/deploy-server.yml` | Deploys after the checks pass on `main`                     |
+
+### First setup on the server
+
+1. Point the DNS A records for `sunoracomponents.eu` and `www.sunoracomponents.eu` to the server, and wait until they resolve. The certificate can only be issued after that.
+2. Clone and start the site next to the other sites:
+
+   ```bash
+   cd ~/sites
+   git clone https://github.com/companyyyy/sunora-components.git sunora
+   cd sunora
+   docker compose up -d --build
+   ```
+
+3. Follow the certificate: `docker logs -f nginx-proxy-acme`. Then open https://sunoracomponents.eu.
+
+### Automatic deploys
+
+Add to the GitHub repository settings:
+
+- Secrets: `SERVER_HOST`, `SERVER_USER`, `SERVER_SSH_KEY` (a private key whose public half is in the server user's `~/.ssh/authorized_keys`), and `SERVER_PORT` if SSH is not on port 22.
+- Variable: `DEPLOY_PATH`, the folder from step 2, for example `/root/sites/sunora`. Deploys stay off until it is set.
+
+After that, every push to `main` that passes the checks is pulled on the server and rebuilt.
+
 ## Adding a language
 
 1. Add the locale code to `src/i18n/routing.ts`.

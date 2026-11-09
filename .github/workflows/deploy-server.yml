@@ -1,0 +1,46 @@
+name: Deploy to server
+
+# Runs after the GitHub Pages workflow (lint, typecheck, tests, build) passes
+# on main, so a broken commit never reaches the server.
+on:
+  workflow_run:
+    workflows: [Deploy to GitHub Pages]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-server
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Skipped until the server is set up: the DEPLOY_PATH variable turns it on.
+    if: >-
+      vars.DEPLOY_PATH != '' &&
+      (github.event_name == 'workflow_dispatch' ||
+       github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and restart the container over SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          port: ${{ secrets.SERVER_PORT || 22 }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          envs: DEPLOY_PATH,DEPLOY_SHA
+          script: |
+            set -e
+            cd "$DEPLOY_PATH"
+            git fetch --quiet origin main
+            git reset --hard "$DEPLOY_SHA"
+            docker compose up -d --build --remove-orphans
+            docker image prune -f
+        env:
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+          # The commit that passed the checks, not whatever main is now.
+          DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
