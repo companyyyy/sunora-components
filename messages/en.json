@@ -6,7 +6,6 @@
     "skipToContent": "Skip to content",
     "becomePartner": "Become a partner",
     "requestQuote": "Request a proposal",
-    "logIn": "Log in",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "menu": "Menu",
@@ -25,7 +24,8 @@
       "cities": "delivery cities",
       "volume": "Pallet and truckload orders"
     },
-    "catalogue": "Catalogue"
+    "catalogue": "Catalogue",
+    "bandStatement": "Inverters, batteries and panels in wholesale volumes, for installers and dealers across Eastern Europe."
   },
   "catalog": {
     "productCount": "{count, plural, one {# product} other {# products}}",
@@ -120,7 +120,6 @@
     "contact": "Contact",
     "partner": "Become a partner",
     "quote": "Request a proposal",
-    "account": "My account",
     "allProducts": "All products",
     "allBrands": "All brands",
     "browseKits": "Ready-made kits"
@@ -177,7 +176,6 @@
     "delivery": "Delivery",
     "support": "Support",
     "contact": "Contact",
-    "account": "My account",
     "terms": "Terms of sale",
     "privacy": "Privacy policy",
     "cookies": "Cookie policy",
@@ -192,8 +190,8 @@
     "backHome": "Back to home"
   },
   "distribution": {
-    "brandsHeading": "Brands we distribute",
-    "brandsLead": "Inverters, batteries and panels from five manufacturers, stocked for wholesale orders.",
+    "brandsHeading": "Partners",
+    "brandsLead": "We are a distributor for five manufacturers of inverters, batteries and panels, with stock ready for wholesale orders.",
     "heading": "We deliver to Eastern Europe",
     "lead": "Large orders shipped to our partners in Ukraine, Moldova, Romania and Poland.",
     "from": "From {city}",
@@ -262,5 +260,8 @@
   },
   "brands": {
     "inCatalogue": "All brands in the catalogue"
+  },
+  "testimonials": {
+    "heading": "What our partners say"
   }
 }

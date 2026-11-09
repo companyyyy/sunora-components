@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
+import portrait from "@/assets/photos/panels-sky-portrait.jpg";
 import { site } from "@/lib/site";
 import { ProposalForm } from "./proposal-form";
 
@@ -41,6 +43,13 @@ export function ProposalSection({
               {street}, {postalCode} {city}, {country}
             </p>
           </address>
+          <Image
+            src={portrait}
+            alt=""
+            placeholder="blur"
+            sizes="(min-width: 1024px) 40vw, 0px"
+            className="mt-10 hidden aspect-[4/5] w-full max-w-md object-cover object-bottom lg:block"
+          />
         </div>
         <div className="lg:col-span-7">
           <ProposalForm />

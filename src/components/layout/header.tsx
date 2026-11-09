@@ -43,12 +43,6 @@ export function Header() {
             >
               {t("requestQuote")}
             </Link>
-            <Link
-              href="/account"
-              className="px-2 text-sm font-medium underline-offset-4 hover:underline"
-            >
-              {t("logIn")}
-            </Link>
           </div>
 
           <Button

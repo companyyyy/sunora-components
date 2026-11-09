@@ -2,6 +2,8 @@ import type { Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { ContactBand } from "@/components/catalog/contact-band";
 import { DeliverySection } from "@/components/distribution/delivery-section";
+import { PhotoBanner } from "@/components/layout/photo-banner";
+import winterFarm from "@/assets/photos/solar-farm-winter.jpg";
 
 export default async function DeliveryPage({
   params,
@@ -11,6 +13,7 @@ export default async function DeliveryPage({
 
   return (
     <>
+      <PhotoBanner src={winterFarm} priority />
       <DeliverySection headingLevel={1} />
       <ContactBand />
     </>

@@ -106,11 +106,6 @@ export function MobileNav() {
                 {t("nav.quote")}
               </Link>
             </li>
-            <li>
-              <Link href="/account" onClick={close} className={linkClass}>
-                {t("common.logIn")}
-              </Link>
-            </li>
           </ul>
         </nav>
 

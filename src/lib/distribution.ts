@@ -1,3 +1,8 @@
+import type { StaticImageData } from "next/image";
+import deye from "@/assets/brands/deye.png";
+import felicitySolar from "@/assets/brands/felicity-solar.png";
+import longi from "@/assets/brands/longi.png";
+import must from "@/assets/brands/must.png";
 import type { CategoryKey } from "./catalog";
 
 /** [longitude, latitude] */
@@ -60,14 +65,24 @@ export const servedCountryIds = new Set<string>(
   [hub, ...destinations].map((city) => city.countryId),
 );
 
-/** The brands we lead with. Names are trademarks: never translate them. */
-export const coreBrands = [
-  { name: "Felicity Solar", categories: ["inverters", "batteries", "panels"] },
-  { name: "MUST", categories: ["inverters", "batteries"] },
-  { name: "DAH Solar", categories: ["panels"] },
-  { name: "LONGi", categories: ["panels"] },
-  { name: "Deye", categories: ["inverters", "batteries"] },
-] as const satisfies readonly {
+/**
+ * Manufacturer partners. Names are trademarks: never translate them.
+ * Logos come from each brand's official website.
+ */
+export const coreBrands: readonly {
   name: string;
+  /** Without a logo the name is shown as text. */
+  logo: StaticImageData | null;
   categories: readonly CategoryKey[];
-}[];
+}[] = [
+  {
+    name: "Felicity Solar",
+    logo: felicitySolar,
+    categories: ["inverters", "batteries", "panels"],
+  },
+  { name: "MUST", logo: must, categories: ["inverters", "batteries"] },
+  // TODO: Add the DAH Solar logo. Their site blocks automated downloads.
+  { name: "DAH Solar", logo: null, categories: ["panels"] },
+  { name: "LONGi", logo: longi, categories: ["panels"] },
+  { name: "Deye", logo: deye, categories: ["inverters", "batteries"] },
+];

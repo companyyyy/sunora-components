@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   // Static site for GitHub Pages: no proxy, server actions or request-time data.
   output: "export",
   trailingSlash: true,
+  // No image server on GitHub Pages: logos ship as the files in src/assets.
+  images: { unoptimized: true },
   // Set by the deploy workflow. Empty on a custom domain and in local development.
   basePath: process.env.BASE_PATH || undefined,
   experimental: {

@@ -2,6 +2,8 @@ import type { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactBand } from "@/components/catalog/contact-band";
 import { CoreBrands } from "@/components/distribution/core-brands";
+import { PhotoBanner } from "@/components/layout/photo-banner";
+import hillside from "@/assets/photos/solar-farm-hillside.jpg";
 import { Link } from "@/i18n/navigation";
 import { brands } from "@/lib/catalog";
 import { productCategories } from "@/lib/nav";
@@ -20,6 +22,7 @@ export default async function BrandsPage({
   return (
     <>
       <h1 className="sr-only">{t("pages.brands")}</h1>
+      <PhotoBanner src={hillside} priority />
       <CoreBrands />
       <div className="container-site pb-12 md:pb-16">
         <h2 className="mb-8 font-mono text-sm text-muted-foreground">

@@ -47,7 +47,6 @@ export const footerGroups = [
       { key: "support", href: "/support" },
       { key: "quote", href: "/quote" },
       { key: "contact", href: "/contact" },
-      { key: "account", href: "/account" },
     ],
   },
 ] as const;
