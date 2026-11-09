@@ -13,12 +13,6 @@ export const categorySlugs = productCategories.map((category) =>
   category.href.replace("/products/", ""),
 );
 
-export const solutionLinks = [
-  { key: "residential", href: "/solutions#residential" },
-  { key: "commercial", href: "/solutions#commercial" },
-  { key: "bess", href: "/solutions#bess" },
-] as const satisfies readonly MenuItem[];
-
 /** Plain header links, in display order. Keys live in the `nav` messages. */
 export const primaryLinks = [
   { key: "brands", href: "/brands" },
@@ -35,7 +29,6 @@ export const footerGroups = [
       { key: "about", href: "/about" },
       { key: "brands", href: "/brands" },
       { key: "delivery", href: "/delivery" },
-      { key: "partner", href: "/partner" },
     ],
   },
   {

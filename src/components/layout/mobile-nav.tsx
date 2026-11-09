@@ -12,7 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Link } from "@/i18n/navigation";
-import { primaryLinks, productCategories, solutionLinks } from "@/lib/nav";
+import { primaryLinks, productCategories } from "@/lib/nav";
 import { LanguageSwitcher } from "./language-switcher";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -69,25 +69,6 @@ export function MobileNav() {
               <li key={key}>
                 <Link href={href} onClick={close} className={linkClass}>
                   {t(`categories.${key}.name`)}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-2 border-t border-border pt-2">
-            <Link
-              href="/solutions"
-              onClick={close}
-              className={`${linkClass} font-semibold`}
-            >
-              {t("nav.solutions")}
-            </Link>
-          </div>
-          <ul>
-            {solutionLinks.map(({ key, href }) => (
-              <li key={key}>
-                <Link href={href} onClick={close} className={linkClass}>
-                  {t(`solutions.${key}.name`)}
                 </Link>
               </li>
             ))}

@@ -112,11 +112,9 @@
     "products": "Products",
     "brands": "Brands",
     "kits": "Kits",
-    "solutions": "Solutions",
     "about": "About",
     "delivery": "Delivery",
     "contact": "Contact",
-    "partner": "Become a partner",
     "quote": "Request a proposal",
     "allProducts": "All products",
     "allBrands": "All brands",
@@ -142,17 +140,6 @@
       "name": "EV chargers"
     }
   },
-  "solutions": {
-    "residential": {
-      "name": "Residential"
-    },
-    "commercial": {
-      "name": "Commercial and industrial"
-    },
-    "bess": {
-      "name": "Battery storage"
-    }
-  },
   "footer": {
     "tagline": "Wholesale distributor of solar equipment for installers, dealers and EPCs in Eastern Europe.",
     "products": "Products",
@@ -166,8 +153,6 @@
     "products": "Products",
     "brands": "Brands",
     "kits": "Kits",
-    "solutions": "Solutions",
-    "partner": "Become a partner",
     "quote": "Request a proposal",
     "about": "About",
     "delivery": "Delivery",
@@ -251,7 +236,6 @@
     "submit": "Send request",
     "sending": "Sending…",
     "sent": "Thank you. Your request has been sent, and a manager will contact you.",
-    "mailto": "Your email app should open with the request filled in. If it doesn't, write to {email}.",
     "error": "The request wasn't sent. Please try again, or contact us at {email} or {phone}."
   },
   "brands": {
@@ -312,5 +296,125 @@
       "address": "Registered address",
       "contact": "Contact"
     }
+  },
+  "legal": {
+    "updated": "Last updated: {date}",
+    "privacy": {
+      "intro": "This policy explains what personal data Sunora components OÜ collects through this website, why, and what rights you have under the EU General Data Protection Regulation (GDPR).",
+      "sections": [
+        {
+          "heading": "1. Who is responsible for your data",
+          "paragraphs": [
+            "The controller is Sunora components OÜ, Kadaka tee 17, 10913 Tallinn, Estonia, VAT ID EE102779655. For any privacy question, write to info@sunoracomponents.eu or call +3728 167 33 99."
+          ]
+        },
+        {
+          "heading": "2. What we collect",
+          "paragraphs": [
+            "Proposal request form: first name, company name, phone, email (optional), city, country, annual turnover range, what you need, your message, and your agreement to this policy.",
+            "Emails and calls: whatever you choose to tell us when you contact us directly.",
+            "Hosting: when you open the site, our hosting provider GitHub processes your IP address, browser type and the time of the request in its server logs, to deliver the pages and protect the service. We do not receive these logs.",
+            "We do not use analytics, advertising or tracking tools, and the site sets no cookies. See the cookie policy for the small amount of information your browser stores."
+          ]
+        },
+        {
+          "heading": "3. How the form sends your request",
+          "paragraphs": [
+            "When you press “Send request”, the form sends your details to FormSubmit (formsubmit.co), a form delivery service, which emails them to info@sunoracomponents.eu. FormSubmit only passes the request on to us."
+          ]
+        },
+        {
+          "heading": "4. Why we use your data and on what legal basis",
+          "list": [
+            "To answer your request and prepare a proposal: steps taken at your request before a contract (GDPR Article 6(1)(b)).",
+            "To supply goods and manage an order once we agree on one: performance of a contract (Article 6(1)(b)), and keeping accounting records as required by Estonian law (Article 6(1)(c)).",
+            "To keep in touch with existing business partners about orders and stock: our legitimate interest in running the business (Article 6(1)(f)). You can object at any time.",
+            "To keep the website secure: our and our hosting provider's legitimate interest (Article 6(1)(f))."
+          ]
+        },
+        {
+          "heading": "5. Who receives your data",
+          "paragraphs": [
+            "Your data is seen only by our staff who handle sales and orders. We also use service providers who process data on our behalf: FormSubmit, which delivers the request form to our inbox; our email provider; and GitHub, Inc., which hosts this website. When you place an order, we share delivery details with the carrier. We do not sell your data or share it for marketing."
+          ]
+        },
+        {
+          "heading": "6. Transfers outside the European Economic Area",
+          "paragraphs": [
+            "GitHub, Inc. is based in the United States, and FormSubmit may also process data outside the European Economic Area. Such transfers rely on the EU–US Data Privacy Framework or on the European Commission's Standard Contractual Clauses."
+          ]
+        },
+        {
+          "heading": "7. How long we keep it",
+          "list": [
+            "Requests that do not lead to an order: up to 24 months after our last contact, then deleted.",
+            "Customer and order records: as long as the business relationship lasts, and accounting documents for 7 years as required by the Estonian Accounting Act."
+          ]
+        },
+        {
+          "heading": "8. Your rights",
+          "paragraphs": [
+            "You can ask us for a copy of your data, to correct it, to delete it, to restrict its use, or to receive it in a portable format. You can object to processing based on our legitimate interest. Write to info@sunoracomponents.eu and we will reply within one month.",
+            "You also have the right to complain to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon, www.aki.ee) or to the data protection authority in your own country."
+          ]
+        },
+        {
+          "heading": "9. Do you have to give us your data?",
+          "paragraphs": [
+            "No. But we need the fields marked as required to answer a proposal request. We do not make automated decisions about you."
+          ]
+        },
+        {
+          "heading": "10. Changes",
+          "paragraphs": [
+            "We will update this page when the way we handle data changes. The date at the top shows the current version."
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "intro": "This site does not use cookies. It does not track you, show ads or measure visits.",
+      "sections": [
+        {
+          "heading": "What your browser stores",
+          "paragraphs": [
+            "Two small entries are kept in your browser's local storage. They stay on your device and are never sent to us."
+          ],
+          "list": [
+            "theme: whether you chose the light or dark design.",
+            "cookie-notice: that you have closed the notice about this policy, so it does not appear again."
+          ]
+        },
+        {
+          "heading": "Why we don't ask for consent",
+          "paragraphs": [
+            "Both entries only remember a choice you made yourself and are needed for the site to work the way you asked. EU rules do not require consent for this kind of storage."
+          ]
+        },
+        {
+          "heading": "Third parties",
+          "paragraphs": [
+            "Fonts, images and the delivery map are served from this site. No content is loaded from other companies, so no third-party cookies can be set."
+          ]
+        },
+        {
+          "heading": "How to remove them",
+          "paragraphs": [
+            "Clear this site's data in your browser settings. The site works the same; it will just show the notice again and use your system's light or dark setting."
+          ]
+        },
+        {
+          "heading": "Questions",
+          "paragraphs": [
+            "Write to info@sunoracomponents.eu. Our privacy policy explains how we handle personal data."
+          ]
+        }
+      ]
+    }
+  },
+  "cookieNotice": {
+    "text": "This site doesn't use tracking cookies. Your browser only remembers your theme choice and that you've seen this notice.",
+    "more": "Cookie policy",
+    "ok": "OK"
   }
 }

@@ -50,7 +50,7 @@ export function Header() {
             size="lg"
             className="px-3 font-semibold"
             nativeButton={false}
-            render={<Link href="/partner" />}
+            render={<Link href="/contact" />}
           >
             {t("becomePartner")}
           </Button>

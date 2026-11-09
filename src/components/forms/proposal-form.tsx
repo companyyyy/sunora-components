@@ -19,13 +19,20 @@ const turnovers = ["under100k", "to500k", "to1m", "to5m", "over5m"] as const;
 const services = ["wholesale", "dealer", "project", "delivery"] as const;
 
 /**
- * Posts JSON to this endpoint when set (Formspree, Web3Forms and similar
- * accept it). The site is static, so without one the form opens the
- * visitor's email app with the request filled in.
+ * The site is static, so requests go through FormSubmit, which emails them
+ * to the company address. The first request triggers an activation email
+ * to that address; nothing is delivered until someone clicks the link in it.
+ * NEXT_PUBLIC_FORM_ENDPOINT overrides this with another FormSubmit-style
+ * JSON endpoint.
+ *
+ * Changing the service changes where personal data goes: update sections 3,
+ * 5 and 6 of the privacy policy (`legal.privacy` messages) in the same change.
  */
-const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
+const endpoint =
+  process.env.NEXT_PUBLIC_FORM_ENDPOINT ||
+  `https://formsubmit.co/ajax/${site.email}`;
 
-type Status = "idle" | "sending" | "sent" | "mailto" | "error";
+type Status = "idle" | "sending" | "sent" | "error";
 
 const control =
   "h-11 w-full border border-input bg-card px-3 text-base outline-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/50";
@@ -89,15 +96,6 @@ export function ProposalForm() {
     };
     const subject = `${t("subject")}: ${data.company}`;
 
-    if (!endpoint) {
-      const body = Object.entries(fields)
-        .map(([label, value]) => `${label}: ${value}`)
-        .join("\n");
-      window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      setStatus("mailto");
-      return;
-    }
-
     setStatus("sending");
     try {
       const response = await fetch(endpoint, {
@@ -106,9 +104,23 @@ export function ProposalForm() {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({ _subject: subject, ...fields }),
+        body: JSON.stringify({
+          ...fields,
+          _subject: subject,
+          // Lets "Reply" in the inbox go straight to the visitor.
+          ...(data.email && { _replyto: data.email }),
+          _template: "table",
+          // Bots fill every field; FormSubmit drops requests where this is set.
+          _honey: data.website ?? "",
+        }),
       });
-      if (!response.ok) throw new Error(String(response.status));
+      const result = (await response.json().catch(() => ({}))) as {
+        success?: string | boolean;
+      };
+      // FormSubmit answers 200 with success "false" when it refuses a request.
+      if (!response.ok || String(result.success) !== "true") {
+        throw new Error(String(response.status));
+      }
       form.reset();
       setStatus("sent");
     } catch {
@@ -121,6 +133,15 @@ export function ProposalForm() {
       onSubmit={onSubmit}
       className="grid gap-x-6 gap-y-5 border border-foreground bg-card p-5 sm:grid-cols-2 md:p-8"
     >
+      {/* Spam trap: hidden from people and screen readers. */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <Field label={t("firstName")} required>
         {(id) => (
           <input
@@ -282,7 +303,6 @@ export function ProposalForm() {
         </button>
         <p role="status" className="text-sm">
           {status === "sent" && t("sent")}
-          {status === "mailto" && t("mailto", { email: site.email })}
           {status === "error" &&
             t("error", { email: site.email, phone: site.phone })}
         </p>

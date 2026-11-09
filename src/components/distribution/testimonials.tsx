@@ -18,18 +18,23 @@ export function Testimonials() {
       >
         {t("heading")}
       </h2>
-      <ul className="mt-8 grid gap-6 md:grid-cols-3">
-        {testimonials.map(({ quote, name, role, company, city }, index) => (
-          <li key={index}>
-            <figure className="flex h-full flex-col justify-between gap-8 border-t-4 border-brand bg-card p-6">
+      <ul className="mt-8 grid gap-6 md:grid-cols-2">
+        {testimonials.map(({ quote, name, role, city }) => (
+          <li key={quote}>
+            <figure className="flex h-full flex-col justify-between gap-8 border-t-4 border-brand bg-card p-6 md:p-8">
               <blockquote className="text-lg">
                 <p>“{quote}”</p>
               </blockquote>
               <figcaption className="text-sm">
-                <span className="block font-semibold">{name}</span>
-                <span className="block text-muted-foreground">
-                  {role}, {company}, {city}
+                {name && <span className="block font-semibold">{name}</span>}
+                <span
+                  className={
+                    name ? "block text-muted-foreground" : "block font-semibold"
+                  }
+                >
+                  {role}
                 </span>
+                <span className="block text-muted-foreground">{city}</span>
               </figcaption>
             </figure>
           </li>

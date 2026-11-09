@@ -11,7 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Link, usePathname } from "@/i18n/navigation";
-import { primaryLinks, productCategories, solutionLinks } from "@/lib/nav";
+import { primaryLinks, productCategories } from "@/lib/nav";
 
 function MenuEntry({ href, name }: { href: string; name: string }) {
   return (
@@ -53,19 +53,6 @@ export function DesktopNav() {
                 ))}
               </ul>
             </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>{t("nav.solutions")}</NavigationMenuTrigger>
-          <NavigationMenuContent className="w-72 p-3">
-            <ul className="flex flex-col">
-              {solutionLinks.map(({ key, href }) => (
-                <li key={key}>
-                  <MenuEntry href={href} name={t(`solutions.${key}.name`)} />
-                </li>
-              ))}
-            </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
 

@@ -1,3 +1,3 @@
-import { placeholderPage } from "@/components/layout/page-placeholder";
+import { legalPage } from "@/components/layout/legal-page";
 
-export default placeholderPage("cookies", 6);
+export default legalPage("cookies");

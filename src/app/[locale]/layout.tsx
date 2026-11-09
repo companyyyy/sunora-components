@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { CookieNotice } from "@/components/layout/cookie-notice";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
@@ -55,6 +56,7 @@ export default async function LocaleLayout({
               {children}
             </main>
             <Footer />
+            <CookieNotice />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

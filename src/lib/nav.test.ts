@@ -8,7 +8,6 @@ import {
   legalLinks,
   primaryLinks,
   productCategories,
-  solutionLinks,
 } from "./nav";
 
 const pageExists = (href: string) => {
@@ -25,7 +24,6 @@ describe("navigation", () => {
   it("only links to pages that exist", () => {
     const hrefs = [
       ...productCategories,
-      ...solutionLinks,
       ...primaryLinks,
       ...footerLinks,
       ...legalLinks,
@@ -40,9 +38,6 @@ describe("navigation", () => {
     }
     for (const { key } of productCategories) {
       expect(messages.categories).toHaveProperty(key);
-    }
-    for (const { key } of solutionLinks) {
-      expect(messages.solutions).toHaveProperty(key);
     }
     for (const { key } of legalLinks) {
       expect(messages.pages).toHaveProperty(key);
