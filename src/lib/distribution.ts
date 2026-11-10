@@ -60,10 +60,8 @@ export const destinations = [
   },
 ] as const satisfies readonly City[];
 
-/** Countries shaded on the map: the hub's and every destination's. */
-export const servedCountryIds = new Set<string>(
-  [hub, ...destinations].map((city) => city.countryId),
-);
+/** Country shaded on the map: only the hub's (Estonia). */
+export const servedCountryIds = new Set<string>([hub.countryId]);
 
 /**
  * Manufacturer partners. Names are trademarks: never translate them.
